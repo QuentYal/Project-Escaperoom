@@ -1,0 +1,157 @@
+body{
+    font-family: 'Outfit', sans-serif;
+}
+.front-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 35%;
+  padding-top: 1rem;
+}
+
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 10rem;
+  padding: 5px;
+}
+
+.img-downleft{
+  box-shadow: 5px 10px;
+  padding-top: 1rem;
+ width: 100%;
+ height: 75%;
+}
+
+.img-bottommid-1{
+  box-shadow: 5px 10px;
+  padding-top: 1rem;
+  width: 100%;
+  height: 75%;
+}
+
+.img-bottommid-2{
+  box-shadow: 5px 10px;
+  padding-top: 1rem;
+  width: 100%;
+  height: 75%;
+}
+
+.img-downright{
+  box-shadow: 5px 10px;
+  padding-top: 1rem;
+  width: 100%;
+  height: 75%;
+}
+.border{
+  border-style: solid;
+}
+
+.list{
+  justify-content: center;
+}
+
+.btn-group .button-Boek {
+  background-color: #151B54;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  position: relative;
+  top: 1rem;
+
+}
+
+ 
+
+.btn-group .button-Boek:hover {
+  background-color: #151B54;
+}
+
+
+.topnav {
+  background-color: rgb(19, 16, 16);
+  overflow: hidden;
+  flex-flow: row;
+}
+
+.topnav a {
+  float: left;
+  text-align: right;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 16px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  position: sticky;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav > .logo > img { 
+  float: left;
+  height: 80px;
+  width: 135px;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.background-cifi{
+  background-image: url(img/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f72346c7568703966396737376972752f73796e7468776176652d333934313732315f313932302e6a7067.jfif);
+}
+
+.background-old{
+  background-image: url(https://www.picgaga.com/uploads/wallpaper/retro-sci-fi/free-download-sci-fi-countryside-painting-city-resolution-full-hd-wallpaper1617364783.jpg);
+}
+
+.background-space{
+  background-image: url(https://i.pinimg.com/originals/27/eb/21/27eb21aa6444863465cf19a70c7d2131.jpg);
+}
+
+.container {
+  padding: none;
+}
+
+
+.row:after {
+  display: table;
+  clear: both
+}
+
+
+.column-100 {
+  float: left;
+  margin: 0;
+}
+
+
+
+@media screen{
+  .column-100 {
+    text-align: center;
+    margin: 0;
+  }
+}
