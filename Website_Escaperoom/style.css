@@ -1,18 +1,46 @@
 body{
-    font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.front-img {
+.position-middle {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
   width: 35%;
   padding-top: 1rem;
+  text-align: center;
 }
 
 .row-flex {
   display: flex;
   flex-wrap: wrap;
+}
+
+.flex-vertical{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-horizontal{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.img-left-info{
+  padding-left: 2rem;
+  width: 25%;
+  height: 25%;
+}
+
+.img-right-info{
+  float: right;
+  padding-right: 2rem;
+  width: 25%;
+  height: 25%;
 }
 
 .column {
@@ -21,32 +49,51 @@ body{
 }
 
 .img-downleft{
-  box-shadow: 5px 10px;
-  padding-top: 1rem;
  width: 100%;
  height: 75%;
 }
 
 .img-bottommid-1{
-  box-shadow: 5px 10px;
-  padding-top: 1rem;
   width: 100%;
   height: 75%;
 }
 
 .img-bottommid-2{
-  box-shadow: 5px 10px;
-  padding-top: 1rem;
   width: 100%;
   height: 75%;
 }
 
 .img-downright{
-  box-shadow: 5px 10px;
-  padding-top: 1rem;
   width: 100%;
   height: 75%;
 }
+
+.img-downright-act{
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+}
+
+.logo-img{
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+}
+.img-shadow{
+  box-shadow: 5px 10px;
+}
+
+.img-size-med{
+  width: 35rem;
+  height: 25rem;
+}
+
+.img-size-small{
+  width: 25rem;
+  height: 15rem;
+}
+
 .border{
   border-style: solid;
 }
@@ -55,28 +102,47 @@ body{
   justify-content: center;
 }
 
-.btn-group .button-Boek {
-  background-color: #151B54;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  position: relative;
-  top: 1rem;
-
+.background-clr-tan{
+  background-color: #D2B48C;
 }
 
- 
+.middle{
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-10%);
+}
+.btn{
+  position: relative;
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid purple;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before{
+  background: purple;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
 
-.btn-group .button-Boek:hover {
-  background-color: #151B54;
+.btn1::before{
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before{
+  width: 100%;
 }
 
 
@@ -121,18 +187,36 @@ body{
 
 .background-cifi{
   background-image: url(img/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f732f72346c7568703966396737376972752f73796e7468776176652d333934313732315f313932302e6a7067.jfif);
+  background-repeat: no-repeat;
+  background-size:cover; 
 }
 
 .background-old{
   background-image: url(https://www.picgaga.com/uploads/wallpaper/retro-sci-fi/free-download-sci-fi-countryside-painting-city-resolution-full-hd-wallpaper1617364783.jpg);
+  background-repeat: no-repeat;
+  background-size:cover; 
 }
 
 .background-space{
   background-image: url(https://i.pinimg.com/originals/27/eb/21/27eb21aa6444863465cf19a70c7d2131.jpg);
+  background-repeat: no-repeat;
+  background-size:cover; 
+}
+
+.wood-background{
+  background-image: url(img/wood-background-design-template-85d21da84d5031d5d9cfabb8c48ad933_screen.jpg);
+  background-repeat: no-repeat;
+  background-size:cover; 
+}
+
+.cloud-background{
+  background-image: url(img/preview-95835-htN8HfnB2U-high_0014.jpg);
+  background-repeat: no-repeat;
+  background-size:cover; 
 }
 
 .container {
-  padding: none;
+  padding: 0;
 }
 
 
@@ -144,7 +228,6 @@ body{
 
 .column-100 {
   float: left;
-  margin: 0;
 }
 
 
@@ -152,6 +235,91 @@ body{
 @media screen{
   .column-100 {
     text-align: center;
-    margin: 0;
   }
 }
+
+.sidepanel{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+.sidepanel a:hover {
+  color: black;
+}
+.sidepanel .close{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+
+}
+.open{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+.open:hover{
+    background-color: blue;
+}
+
+.fade-in{
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.fade-in-2{
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.vertical-menu {
+  width: 400px; 
+  padding: 10rem 0;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black; 
+  display: block; 
+  padding: 12px; 
+  text-decoration: none; 
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; 
+}
+
+.vertical-menu a.active {
+  background-color: #334ec5;
+  color: white;
+}
+
